@@ -517,6 +517,7 @@ def evaluate_classifier(X_train, y_train, w, X_test, y_test, params):
             y_pred = model.predict(X_test)
 
     if params['model'] == 'contrastive':
+        # See https://github.com/sayakpaul/SimCLR-in-TensorFlow-2/blob/master/SimCLR_ImageNet_Subset.ipynb
         from simclr.losses import _dot_simililarity_dim1 as sim_func_dim1, _dot_simililarity_dim2 as sim_func_dim2
         from simclr.helpers import get_negative_mask
         tf.random.set_seed(tf_seed)
