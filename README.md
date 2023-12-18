@@ -3,7 +3,7 @@ Code to reproduce the results in [Data Augmentation for Compositional Data: Adva
 
 To simply run the augmentations on some data:
 
-```
+```py
 def aitchison_mixup(X_train, y_train, factor=10, weight=0.5):
     """Applies Aitchison Mixup to some training data.
 
